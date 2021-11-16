@@ -26,7 +26,7 @@ You should have:
 
 Simple ``it works`` test: http://localhost:5080/test-pdo/test-PDO.php
 
-You have a xdebug installed and cat put breakpoints in your code.
+xdebug is installed so you can put breakpoints in your code.
 
 # Others links
 
