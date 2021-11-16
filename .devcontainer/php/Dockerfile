@@ -6,11 +6,11 @@ RUN apt-get update && apt-get upgrade -y \
 
 # additional OS packages
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends git net-tools \
+    && apt-get -y install --no-install-recommends git net-tools zip unzip libzip-dev \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # PHP
-RUN docker-php-ext-install mysqli pdo pdo_mysql && a2enmod rewrite
+RUN docker-php-ext-install mysqli pdo pdo_mysql zip && a2enmod rewrite
 
 # Install composer
 # COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
@@ -27,6 +27,7 @@ RUN pecl install xdebug-3.0.4 && \
     xdebug.start_with_request = 1 \n\
     xdebug.discover_client_host = 1 \n\
     xdebug.mode=debug \n\
+    ; xdebug.mode=off \n\
     xdebug.client_port = 9003 \n\
     " >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && \
     docker-php-ext-enable xdebug
