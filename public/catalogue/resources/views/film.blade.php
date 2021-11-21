@@ -62,42 +62,36 @@
             <div class="col-4">
 
                 <img style="margin: 50px ; margin-bottom:30px; width: 400px;height: 400px;"
-                    src="https://img-4.linternaute.com/YJkTFdfFg2FGocwpuO4Qg3UwCuw=/1500x/smart/d4efe5759d8c42ff91f4ea26d911395e/ccmcms-linternaute/27910778.jpg">
+                    src='<?php echo $films[0]->path; ?>'>
                 <div style="margin-left: 180px;"> <a class="btn btn-primary" href="#" role="button"> Like </a>
                     <button class="btn btn-danger" type="button">Dislike</button>
                 </div>
             </div>
             <div class="col-8" style="color: white;">
                 <div style="background-color: #252850; margin: 50px; height: 400px;" class="card  text-white mb-3">
-                    <div class="card-header">Spider Man</div>
+                    <div class="card-header"><?php echo $films[0]->name; ?></div>
                     <div class="card-body">
                         <h4 class="card-title">INFORMATIONS </h4>
                         <p class="card-text">
                         <div style="margin-left: 50px ;">
                             <div class="row">
                                 <div class="col-3">
-                                    <div style="margin-bottom: 7px ;">TYPE :</div>
-
-                                    <div style="margin-bottom: 7px ;">Annotation : </div>
-
+                                    <div style="margin-bottom: 7px ;">Annotation :</div>
                                     <div style="margin-bottom: 7px ;">Durée : </div>
                                     <div style="margin-bottom: 7px ;">Année : </div>
                                     <div style="margin-bottom: 7px ;">Réalisation : </div>
-                                    <div style="margin-bottom: 7px ;">Acteur Principale : </div>
+                                    <div style="margin-bottom: 7px ;">Acteurs Pricipaux : </div>
                                     <div style="margin-bottom: 7px ;">Description : </div>
                                 </div>
                            
                             
                                 <div class="col-9">
-                                    <div style="margin-bottom: 7px ;"> TEST</div>
-
-                                    <div style="margin-bottom: 7px ;"> TEST </div>
-
-                                    <div style="margin-bottom: 7px ;"> TEST </div>
-                                    <div style="margin-bottom: 7px ;"> TEST </div>
-                                    <div style="margin-bottom: 7px ;"> TEST </div>
-                                    <div style="margin-bottom: 7px ;"> TEST </div>
-                                    <div style="margin-bottom: 7px ;"> TEST </div>
+                                    <div style="margin-bottom: 7px ;"> <?php echo $films[0]->category; ?></div>
+                                    <div style="margin-bottom: 7px ;"><?php echo $films[0]->duree; ?> </div>
+                                    <div style="margin-bottom: 7px ;"> <?php echo $films[0]->annee; ?> </div>
+                                    <div style="margin-bottom: 7px ;"> <?php echo $films[0]->director; ?></div>
+                                    <div style="margin-bottom: 7px ;"> <?php echo $films[0]->acteur_principale; ?> </div>
+                                    <div style="margin-bottom: 7px ;"> <?php echo $films[0]->description; ?></div>
                                 </div>
                             </div>
 
