@@ -57,7 +57,16 @@
                     <li class="nav-item"><a class="nav-link" href="#about"> </a></li>
                     <li class="nav-item"><a class="nav-link" href="#about"> </a></li>
                     <li class="nav-item"><a class="nav-link" href="">Langue</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">S'identifier</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">S'identifier</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href='/auth/register'>S'identifier</a></li> -->
+                        <!-- @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">S'identifier</a>
+                        @endif -->
+                    
+
+                    <!-- @if(Auth::check())
+
+                    @endif -->
                 </ul>
             </div>
         </div>

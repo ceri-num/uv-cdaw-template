@@ -109,13 +109,19 @@ class listeMEdiasController extends Controller
         
     }
     public function viewFilm($id){
-        
-        
-
-        
-
         $films = film::where('id', $id)->get();
         return view('film',['films'=>$films]);
+        
+    }
+
+    // public function authentication(){
+       
+    //     return view('loginPage');
+        
+    // }
+    public function register(){
+       
+        return view('/auth/register');
         
     }
 
