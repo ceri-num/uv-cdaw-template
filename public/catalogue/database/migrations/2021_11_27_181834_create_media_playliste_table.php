@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJaimesTable extends Migration
+class CreateMediaPlaylisteTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateJaimesTable extends Migration
      */
     public function up()
     {
-        Schema::create('jaimes', function (Blueprint $table) {
+        Schema::create('media_mlayliste', function (Blueprint $table) {
             // $table->id();
             // $table->string('id_utilisateurs')->references('id')->on('utilisateurs');
             // $table->string('id_media')->references('id')->on('medias');
@@ -21,12 +21,12 @@ class CreateJaimesTable extends Migration
             // $table->timestamps();
 
             $table->id();
-            $table->unsignedBigInteger('id_utilisateurs');
+            $table->unsignedBigInteger('id_playliste');
             $table->unsignedBigInteger('id_media');
             $table->text('date');
             $table->timestamps();
    
-            $table->foreign('id_utilisateurs')->references('id_utilisateurs')->on('utilisateurs');
+            $table->foreign('id_playliste')->references('id')->on('playlistes');
             $table->foreign('id_media')->references('id_media')->on('media');
             //$table->primary(['id_utilisateur', 'id_media']);
         });
@@ -39,6 +39,6 @@ class CreateJaimesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jaimes');
+        Schema::dropIfExists('media_playliste');
     }
 }
