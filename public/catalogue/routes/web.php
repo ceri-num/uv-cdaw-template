@@ -51,8 +51,8 @@ Route::post('/edit/{id}','App\Http\Controllers\listeMEdiasController@EditFilm');
 Route::get('/delete/{id}','App\Http\Controllers\listeMEdiasController@delFilm');
 Route::get('/edits', 'App\Http\Controllers\listeMEdiasController@showFilms');
 
-Route::get('/auth/register', 'App\Http\Controllers\listeMEdiasController@register')->name('register');
-Route::get('/authentication','App\Http\Controllers\listeMEdiasController@authentication')->name('loginPage');
+// Route::get('/auth/register', 'App\Http\Controllers\listeMEdiasController@register')->name('register');
+// Route::get('/authentication','App\Http\Controllers\listeMEdiasController@authentication')->name('loginPage');
 // Auth::routes();
 
 

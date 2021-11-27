@@ -119,11 +119,11 @@ class listeMEdiasController extends Controller
     //     return view('loginPage');
         
     // }
-    public function register(){
+    // public function register(){
        
-        return view('/auth/register');
+    //     return view('/auth/register');
         
-    }
+    // }
 
 
 }
